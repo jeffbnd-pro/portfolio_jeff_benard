@@ -1,0 +1,1 @@
+<h2>Partie Admin</h2>

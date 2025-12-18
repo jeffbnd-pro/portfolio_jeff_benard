@@ -9,9 +9,11 @@ return function (Router $router) {
 
     $router->get('/project', [ProjectController::class, 'index']);
     $router->get('/project/show', [ProjectController::class, 'show']);
-    $router->get('/admin/create', [ProjectController::class, 'create']);
-    $router->post('/admin/store', [ProjectController::class, 'store']);
-    $router->get('/admin/edit', [ProjectController::class, 'edit']);
-    $router->post('/admin/update', [ProjectController::class, 'update']);
-    $router->post('/admin/delete', [ProjectController::class, 'delete']);
+
+    $router->get('/admin', [AdminController::class, 'index']);
+    $router->get('/admin/create', [AdminController::class, 'create']);
+    $router->post('/admin/store', [AdminController::class, 'store']);
+    $router->get('/admin/edit', [AdminController::class, 'edit']);
+    $router->post('/admin/update', [AdminController::class, 'update']);
+    $router->post('/admin/delete', [AdminController::class, 'delete']);
 };
