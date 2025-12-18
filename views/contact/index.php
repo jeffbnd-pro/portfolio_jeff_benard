@@ -1,4 +1,4 @@
 <section id="home-section">
-    <h1><?= htmlspecialchars($title) ?></h1>
+    <h2><?= htmlspecialchars($title) ?></h2>
     <p><?= htmlspecialchars($message) ?></p>
 </section>

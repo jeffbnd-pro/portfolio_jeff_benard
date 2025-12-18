@@ -9,11 +9,14 @@ final class View
     {
         $viewsDir = dirname(__DIR__) . '/../views';
         $viewFile = $viewsDir . '/' . $template . '.php';
-        $layout   = $viewsDir . '/../layout.php';
+        $layout = $viewsDir . '/../layout.php';
+        $header = $viewsDir . '/static/header.php';
+        $footer = $viewsDir . '/static/footer.php';
 
         if (!file_exists($viewFile)) {
             return "View introuvable: {$template}";
         }
+
 
         extract($data, EXTR_SKIP);
 
@@ -22,8 +25,11 @@ final class View
             $view = $viewFile;
             require $layout;
         } else {
+            require $header;
             require $viewFile;
+            require $footer;
+
         }
-        return (string)ob_get_clean();
+        return (string) ob_get_clean();
     }
 }
