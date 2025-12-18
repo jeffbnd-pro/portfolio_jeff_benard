@@ -1,0 +1,169 @@
+:root {
+  --vscode-bg-editor: #1e1e1e;
+  --vscode-bg-sidebar: #252526;
+  --vscode-bg-activity-bar: #333333;
+  --vscode-bg-header: #2d2d2d;
+  --vscode-tab-active-bg: #1e1e1e;
+  --vscode-tab-active-fg: #ffffff;
+  --vscode-border: #454545;
+  --vscode-text: #d4d4d4;
+  --vscode-comment: #6a9955;
+  --vscode-keyword: #569cd6;
+  --vscode-string: #ce9178;
+  --vscode-function: #dcdcaa;
+  --vscode-variable: #9cdcfe;
+  --vscode-focus-border: #007fd4;
+  --vscode-selection: #264f78;
+  --vscode-status-bar: #007acc;
+}
+
+body {
+  background-color: var(--vscode-bg-editor);
+  font-family: "Courier New", Courier, monospace;
+  color: var(--vscode-text);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+img{
+  width: 100%;
+}
+
+/* --- FOOTER --- */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* --- HEADER --- */
+
+.vscode-header {
+  background-color: var(--vscode-bg-header); 
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--vscode-border);
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  background-color: #2d2d2d; 
+  font-size: 0.9rem;
+}
+
+.nav-controls .arrow {
+  color: var(--vscode-text);
+  opacity: 0.7;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.search-bar {
+  background-color: #3c3c3c;
+  border: 1px solid #676767;
+  border-radius: 4px;
+  padding: 4px 100px; 
+  color: var(--vscode-text);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 300px;
+}
+
+.search-icon {
+  font-size: 0.7rem;
+  opacity: 0.6;
+}
+
+.contact-controls .control-icon {
+  margin-left: 10px;
+}
+
+.tabs-bar {
+  display: flex;
+  background-color: #252526;
+  overflow-x: auto; /* Scroll si trop d'onglets */
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #2d2d2d;
+  color: #969696; 
+  border-right: 1px solid var(--vscode-border);
+  border-top: 1px solid transparent; 
+  cursor: pointer;
+  font-size: 0.9rem;
+  min-width: 140px;
+  text-decoration: none; 
+  transition: background 0.1s;
+}
+
+
+.tab.active {
+  background-color: var(
+    --vscode-bg-editor
+  ); 
+  color: #ffffff;
+  border-top: 1px solid var(--vscode-status-bar);
+}
+
+.tab:hover {
+  background-color: var(--vscode-bg-editor);
+}
+
+.file-icon {
+  margin-right: 8px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.php-icon {
+  color: #777bb3;
+}
+
+.close-icon {
+  margin-left: auto; 
+  padding-left: 10px;
+  opacity: 0; 
+  font-size: 1.1rem;
+}
+
+.tab:hover .close-icon {
+  opacity: 1;
+}
+
+
+/* --- MAIN GLOBAL --- */
+
+
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+/* --- MAIN HOMEPAGE --- */
+.hero-section{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--vscode-border);
+}
