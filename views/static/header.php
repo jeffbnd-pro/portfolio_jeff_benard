@@ -11,7 +11,7 @@
 
     $pages = [
         '/' => 'Accueil',
-        '/projets' => 'Projets',
+        '/project' => 'Projets',
         '/contact' => 'Contact'
     ];
 
