@@ -9,7 +9,8 @@ class ProjectController extends Controller
 {
     public function index(): Response
     {
-        return $this->view('home', [
+        // On appelle la vue 'project/index' pour charger views/project/index.php
+        return $this->view('project/index', [
             'title' => 'Bienvenue sur ma page Projet',
             'message' => 'Voici mes projets :'
         ]);

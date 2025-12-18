@@ -6,6 +6,27 @@
     <title>PortFolio Jeff Benard</title>
     <link rel="stylesheet" href="/public/assets/css/style.css">
 </head>
+<?php
+    $uri = $_SERVER['REQUEST_URI'] ?? '/';
+
+    $pages = [
+        '/' => 'Accueil',
+        '/projets' => 'Projets',
+        '/contact' => 'Contact'
+    ];
+
+    $keys = array_keys($pages);
+    $currentIndex = array_search($uri, $keys);
+
+    if ($currentIndex === false)
+        $currentIndex = 0;
+
+    $prevIndex = ($currentIndex - 1 < 0) ? count($keys) - 1 : $currentIndex - 1;
+    $nextIndex = ($currentIndex + 1 >= count($keys)) ? 0 : $currentIndex + 1;
+
+    $prevLink = $keys[$prevIndex];
+    $nextLink = $keys[$nextIndex];
+?>
 <body>
     <header class="vscode-header">
         
